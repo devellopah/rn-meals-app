@@ -1,20 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
 
-export default function App() {
+import CategoriesScreen from './screens/CategoriesScreen'
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hi there</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <CategoriesScreen />
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App

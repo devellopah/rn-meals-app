@@ -40,7 +40,7 @@ const CategoryGridTile = ({ title, color }) => {
         android_ripple={{ color: '#ccc' }}
         style={({ pressed }) => [
           styles.button,
-          pressed ? styles.buttonPressed : null
+          pressed && styles.buttonPressed
         ]}
       >
         <View style={[styles.innerContainer, { backgroundColor: color }]}>

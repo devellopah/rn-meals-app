@@ -1,4 +1,5 @@
-import { FlatList, View, useState } from 'react-native'
+import { useState } from 'react'
+import { FlatList, View } from 'react-native'
 import CategoryGridTile from '../components/CategoryGridTile'
 import { CATEGORIES } from '../data/dummy-data'
 

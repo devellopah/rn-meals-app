@@ -1,7 +1,7 @@
 import { View, FlatList, StyleSheet } from 'react-native'
 import { useRoute } from '@react-navigation/native'
 import { MEALS } from '../data/dummy-data'
-import MealItem from './components/MealItem'
+import MealItem from '../components/MealItem'
 
 function MealsOverviewScreen(params) {
   const route = useRoute()

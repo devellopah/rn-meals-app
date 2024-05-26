@@ -13,9 +13,25 @@ const App = () => {
     <>
     <StatusBar style="dark" />
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="MealsCategories" component={CategoriesScreen}></Stack.Screen>
-        <Stack.Screen name="MealsOverviewScreen" component={MealsOverviewScreen}></Stack.Screen>
+      <Stack.Navigator screenOptions={{
+        headerStyle: {backgroundColor: '#351401'},
+        contentStyle: {backgroundColor: '#3f2f25'},
+        headerTintColor: 'white'
+      }}>
+        <Stack.Screen
+          name="MealsCategories"
+          component={CategoriesScreen}
+          options={{
+            title: 'Meals Categories'
+          }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="MealsOverview"
+          component={MealsOverviewScreen}
+          options={{
+            title: 'Meals Overview'
+          }}
+        ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </>

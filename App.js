@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { CATEGORIES } from './data/dummy-data'
 
 
 import CategoriesScreen from './screens/CategoriesScreen'
@@ -28,9 +29,11 @@ const App = () => {
         <Stack.Screen
           name="MealsOverview"
           component={MealsOverviewScreen}
-          options={{
-            title: 'Meals Overview'
-          }}
+          // options={({ route, navigation }) => {
+          //   return {
+          //     title: CATEGORIES.find(cat => cat.id === route.params.categoryId).title
+          //   }
+          // }}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

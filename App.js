@@ -6,6 +6,7 @@ import { CATEGORIES } from './data/dummy-data'
 
 import CategoriesScreen from './screens/CategoriesScreen'
 import MealsOverviewScreen from './screens/MealsOverviewScreen'
+import MealDetailsScreen from './screens/MealDetailsScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -29,12 +30,12 @@ const App = () => {
         <Stack.Screen
           name="MealsOverview"
           component={MealsOverviewScreen}
-          // options={({ route, navigation }) => {
-          //   return {
-          //     title: CATEGORIES.find(cat => cat.id === route.params.categoryId).title
-          //   }
-          // }}
         ></Stack.Screen>
+        <Stack.Screen
+          name="MealDetails"
+          component={MealDetailsScreen}
+        >
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </>

@@ -1,11 +1,12 @@
 import { View, Pressable, Text, Image, StyleSheet } from 'react-native'
 
-function MealItem({ title, imageUrl, duration, complexity, affordability }) {
+function MealItem({ title, imageUrl, duration, complexity, affordability, onPressHandler }) {
   return (
     <View>
       <Pressable
         android_ripple={{color: '#ccc'}}
         style={({ pressed }) => pressed && styles.buttonPressed}
+        onPress={onPressHandler}
       >
         <View>
           <Image source={{uri: imageUrl}} style={styles.image} />

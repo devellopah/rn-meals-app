@@ -1,4 +1,6 @@
 import { View, Pressable, Text, Image, StyleSheet } from 'react-native'
+import MealDetails from './MealDetails'
+
 
 function MealItem({ title, imageUrl, duration, complexity, affordability, onPressHandler }) {
   return (
@@ -12,11 +14,11 @@ function MealItem({ title, imageUrl, duration, complexity, affordability, onPres
           <Image source={{uri: imageUrl}} style={styles.image} />
           <Text style={styles.title}>{ title }</Text>
         </View>
-        <View>
-          <Text>{duration}m</Text>
-          <Text>{complexity.toUpperCase()}</Text>
-          <Text>{affordability.toUpperCase()}</Text>
-        </View>
+        <MealDetails
+          duration={duration}
+          complexity={complexity}
+          affordability={affordability}
+        />
       </Pressable>
     </View>
   )
